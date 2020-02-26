@@ -43,10 +43,10 @@ class BinaryLogisticRegression:
                 continue
             else:
                 validation_Z = np.dot(validation_X, self.W) + self.b
-                validation_prediction = self.sigmoid(validation_Z)
-                for i in range(validation_prediction.shape[0]):
-                    validation_prediction[i, 0] = 1 if validation_prediction[i, 0] > 0.5 else 0
-                print("Validation Accuracy: {}%".format(100 - np.mean(np.abs(validation_prediction - validation_Y)) * 100))
+                validation_predictions = self.sigmoid(validation_Z)
+                for i in range(validation_predictions.shape[0]):
+                    validation_predictions[i, 0] = 1 if validation_predictions[i, 0] > 0.5 else 0
+                print("Validation Accuracy: {}%".format(100 - np.mean(np.abs(validation_predictions - validation_Y)) * 100))
 
     # predict function predicts labels of the test set and returns them in an array.
     def predict(self, test_X):

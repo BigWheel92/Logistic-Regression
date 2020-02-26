@@ -16,8 +16,6 @@ class BinaryLogisticRegression:
             Z = np.dot(train_X, self.W) + self.b
             self.A = self.sigmoid(Z)
 
-
-
             # computing cost
             cost = -(1 / m) * np.sum((train_Y * np.log(self.A) + (1 - train_Y) * np.log(1 - self.A)), axis=0)
             cost = np.squeeze(cost)

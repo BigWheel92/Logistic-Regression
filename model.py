@@ -51,12 +51,12 @@ class BinaryLogisticRegression:
     # predict function predicts labels of the test set and returns them in an array.
     def predict(self, test_X):
         Z = np.dot(test_X, self.W) + self.b
-        prediction = self.sigmoid(Z)
+        predictions = self.sigmoid(Z)
 
-        for i in range(prediction.shape[0]):
-            prediction[i, 0] = 1 if prediction[i, 0] > 0.5 else 0
+        for i in range(predictions.shape[0]):
+            predictions[i, 0] = 1 if predictions[i, 0] > 0.5 else 0
 
-        return prediction
+        return predictions
 
     def sigmoid(self, Z):
         return 1 / (1 + np.exp(-Z))

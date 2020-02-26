@@ -4,11 +4,11 @@ a vectorized binary logistic regression implementation in python.
 
 The following functions are supported:
 
-fit(self, train_X, train_Y, learningRate=0.01, numOfIterations=2000, validation_X=None, validation_Y=None): fit function is passed as parameters training dataset (train_X), training dataset labels (train_Y), learningRate, numOfIterations, validation dataset and validation dataset labels. This funtion then learns weights.
+1. fit(self, train_X, train_Y, learningRate=0.01, numOfIterations=2000, validation_X=None, validation_Y=None): fit function is passed as parameters training dataset (train_X), training dataset labels (train_Y), learningRate, numOfIterations, validation dataset and validation dataset labels. This funtion then learns weights.
 
-predict(self, test_X): predict function is passed as parameter the test set (test_X). It then predicts the labels of each item in the test set and returns the labels in an array.
+2. predict(self, test_X): predict function is passed as parameter the test set (test_X). It then predicts the labels of each item in the test set and returns the labels in an array.
 
-sigmoid(self, Z): sigmoid function (activation function) is used by above two functions.
+3. sigmoid(self, Z): sigmoid function (activation function) is used by above two functions.
 
 Note:
 

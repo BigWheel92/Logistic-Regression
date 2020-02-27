@@ -49,3 +49,17 @@ predictions=lg.predict(test_X=test_set_x)
 
 #print test accuracy
 print("Test Accuracy: {}%".format(100 - np.mean(np.abs(predictions - test_set_y)) * 100))
+
+#now let's make prediction using our own cat image (image taken from google images).
+print("\n")
+from PIL import Image
+image = Image.open('./dataset/catpic.jpeg')
+image= image.resize((64,64)) #the images in the training set were also 64 by 64.
+
+# convert image to numpy array
+data = np.asarray(image)
+data=np.reshape(data, (1, -1))
+
+print(data.shape)
+my_predicted_image=lg.predict(data)
+print("y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts a \"" + classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") +  "\" picture.")

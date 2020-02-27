@@ -50,7 +50,7 @@ predictions=lg.predict(test_X=test_set_x)
 #print test accuracy
 print("Test Accuracy: {}%".format(100 - np.mean(np.abs(predictions - test_set_y)) * 100))
 
-#now let's make prediction using our own cat image (image taken from google images).
+#now let's make prediction for our own cat image (image taken from google images).
 print("\n")
 from PIL import Image
 image = Image.open('./dataset/catpic.jpeg')

@@ -61,5 +61,5 @@ data = np.asarray(image)
 data=np.reshape(data, (1, -1))
 
 print(data.shape)
-my_predicted_image=lg.predict(data)
-print("y = " + str(np.squeeze(my_predicted_image)) + ", your algorithm predicts a \"" + classes[int(np.squeeze(my_predicted_image)),].decode("utf-8") +  "\" picture.")
+predicted_label=lg.predict(data)
+print("y = " + str(np.squeeze(predicted_label)) + ", your algorithm predicts a \"" + classes[int(np.squeeze(predicted_label)),].decode("utf-8") +  "\" picture.")

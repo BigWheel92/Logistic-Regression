@@ -16,4 +16,4 @@ Note:
 
 -> The shape of array containing labels for training set, test set and validation set must be (m, 1) where m is the number of items.
 
--> The model has been tested in main.py on dataset containg cat images (dataset has been taken from coursera deep learning course assignment). The model gives 72% test accuracy.
+-> The model has been trained and tested in main.py on a dataset containg cat images (dataset has been taken from coursera deep learning course assignment). The model gives 72% test accuracy.

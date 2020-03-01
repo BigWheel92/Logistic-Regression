@@ -21,7 +21,7 @@ class BinaryLogisticRegression:
             cost = np.squeeze(cost)
 
             #convert computed values in A to absolute 0 or 1 (for measuring accuracy)
-            predictions=np.copy(A)
+            predictions=np.copy(self.A)
             for i in range(predictions.shape[0]):
                 predictions[i, 0] = 1 if predictions[i, 0] > 0.5 else 0
 

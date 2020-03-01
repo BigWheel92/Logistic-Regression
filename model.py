@@ -21,10 +21,9 @@ class BinaryLogisticRegression:
             cost = np.squeeze(cost)
 
             #convert computed values in A to absolute 0 or 1 (for measuring accuracy)
-            for j in range(self.A.shape[0]):
-                self.A[j, 0] = 1 if self.A[j, 0] > 0.5 else 0
+            predictions=np.round(self.A)
 
-            print("Iteration= ", i + 1, ". Cost= ", cost, ". Train Accuracy= {}%".format(100 - np.mean(np.abs(self.A - train_Y)) * 100), '. ', sep='', end='')
+            print("Iteration= ", i + 1, ". Cost= ", cost, ". Train Accuracy= {}%".format(100 - np.mean(np.abs(predictions - train_Y)) * 100), '. ', sep='', end='')
 
             # calculating gradients
             dz = self.A - train_Y

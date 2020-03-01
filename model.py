@@ -22,8 +22,8 @@ class BinaryLogisticRegression:
 
             #convert computed values in A to absolute 0 or 1 (for measuring accuracy)
             predictions=np.copy(self.A)
-            for i in range(predictions.shape[0]):
-                predictions[i, 0] = 1 if predictions[i, 0] > 0.5 else 0
+            for j in range(predictions.shape[0]):
+                predictions[j, 0] = 1 if predictions[j, 0] > 0.5 else 0
 
             print("Iteration= ", i + 1, ". Cost= ", cost, ". Train Accuracy= {}%".format(100 - np.mean(np.abs(predictions - train_Y)) * 100), '. ', sep='', end='')
 
